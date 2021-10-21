@@ -90,6 +90,6 @@ References:
 2-  https://github.com/hadipourh/AES-VHDL/tree/master/AES-ENC/RTL
 3-  Vivado Design Suite Tutorial, Partial Reconfiguration, UG947
 4-  Vivado Design Suite User Guide, Partial Reconfiguration, UG909
-5-  Conceptual Design and Realization of a Dynamic Partial Reconfiguration Extension of an Existing Soft-Core Processor, Philipp Kerling	
+5-  Conceptual Design and Realization of a Dynamic Partial Reconfiguration Extension of an Existing Soft-Core Processor, Philipp Kerling
 6- https://forums.xilinx.com/t5/Vivado-TCL-Community/Partial-reconfiguration-black-box-with-no-cells-after-synthesis/td-p/800692
 
