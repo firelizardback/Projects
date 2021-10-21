@@ -1,0 +1,682 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Dec 15 15:30:32 2019
+# Process ID: 3303
+# Current directory: /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1
+# Command line: vivado
+# Log file: /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/vivado.log
+# Journal file: /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project mult32_float /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/mult32_float -part xc7z020clg400-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
+set_property board_part digilentinc.com:arty-z7-20:part0:1.0 [current_project]
+set_property target_language VHDL [current_project]
+add_files -norecurse /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/mult32_float/mult32_float.vhd
+update_compile_order -fileset sources_1
+synth_design -top function128 -part xc7z020clg400-1 -mode out_of_context
+Command: synth_design -top function128 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 3661 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 6833.621 ; gain = 129.656 ; free physical = 6530 ; free virtual = 13548
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'function128' [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/mult32_float/mult32_float.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'function128' (1#1) [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/mult32_float/mult32_float.vhd:40]
+WARNING: [Synth 8-3917] design function128 has port done driven by constant 0
+WARNING: [Synth 8-3331] design function128 has unconnected port clk
+WARNING: [Synth 8-3331] design function128 has unconnected port rst
+WARNING: [Synth 8-3331] design function128 has unconnected port x[127]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[126]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[125]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[124]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[123]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[122]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[121]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[120]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[119]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[118]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[117]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[116]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[115]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[114]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[113]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[112]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[111]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[110]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[109]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[108]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[107]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[106]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[105]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[104]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[103]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[102]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[101]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[100]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[99]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[98]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[97]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[96]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[95]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[94]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[93]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[92]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[91]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[90]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[89]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[88]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[87]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[86]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[85]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[84]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[83]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[82]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[81]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[80]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[79]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[78]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[77]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[76]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[75]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[74]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[73]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[72]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[71]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[70]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[69]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[68]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[67]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[66]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[65]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[64]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[63]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[62]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[61]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[60]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[59]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[58]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[57]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[56]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[55]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[54]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[53]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[52]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[51]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[50]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[49]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[48]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[47]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[46]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[45]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[44]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[43]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[42]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[41]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[40]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[39]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[38]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[37]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[36]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[35]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[34]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[33]
+WARNING: [Synth 8-3331] design function128 has unconnected port x[32]
+WARNING: [Synth 8-3331] design function128 has unconnected port y[127]
+WARNING: [Synth 8-3331] design function128 has unconnected port y[126]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 6938.371 ; gain = 234.406 ; free physical = 6503 ; free virtual = 13504
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 6956.184 ; gain = 252.219 ; free physical = 6504 ; free virtual = 13505
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 6964.188 ; gain = 260.223 ; free physical = 6504 ; free virtual = 13505
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+WARNING: [Synth 8-327] inferring latch for variable 'carry_reg' [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/mult32_float/mult32_float.vhd:113]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 7043.695 ; gain = 339.730 ; free physical = 6350 ; free virtual = 13349
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 39    
+	   3 Input      1 Bit         XORs := 610   
++---Muxes : 
+	   5 Input     23 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   3 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module function128 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 39    
+	   3 Input      1 Bit         XORs := 610   
++---Muxes : 
+	   5 Input     23 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   3 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3917] design function128 has port done driven by constant 0
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:00:45 . Memory (MB): peak = 7326.719 ; gain = 622.754 ; free physical = 6297 ; free virtual = 13300
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:00:45 . Memory (MB): peak = 7326.719 ; gain = 622.754 ; free physical = 6301 ; free virtual = 13304
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:51 ; elapsed = 00:00:47 . Memory (MB): peak = 7326.719 ; gain = 622.754 ; free physical = 6304 ; free virtual = 13307
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:53 ; elapsed = 00:00:48 . Memory (MB): peak = 7326.719 ; gain = 622.754 ; free physical = 6299 ; free virtual = 13303
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:53 ; elapsed = 00:00:48 . Memory (MB): peak = 7326.719 ; gain = 622.754 ; free physical = 6299 ; free virtual = 13303
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:53 ; elapsed = 00:00:48 . Memory (MB): peak = 7326.719 ; gain = 622.754 ; free physical = 6299 ; free virtual = 13303
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:53 ; elapsed = 00:00:48 . Memory (MB): peak = 7326.719 ; gain = 622.754 ; free physical = 6299 ; free virtual = 13303
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:53 ; elapsed = 00:00:48 . Memory (MB): peak = 7326.719 ; gain = 622.754 ; free physical = 6299 ; free virtual = 13303
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:53 ; elapsed = 00:00:48 . Memory (MB): peak = 7326.719 ; gain = 622.754 ; free physical = 6299 ; free virtual = 13303
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT2 |    35|
+|2     |LUT3 |    24|
+|3     |LUT4 |   320|
+|4     |LUT5 |    85|
+|5     |LUT6 |   559|
+|6     |LD   |     1|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |  1024|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:53 ; elapsed = 00:00:48 . Memory (MB): peak = 7326.719 ; gain = 622.754 ; free physical = 6299 ; free virtual = 13303
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 487 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:53 ; elapsed = 00:00:48 . Memory (MB): peak = 7326.719 ; gain = 622.754 ; free physical = 6301 ; free virtual = 13304
+Synthesis Optimization Complete : Time (s): cpu = 00:00:53 ; elapsed = 00:00:48 . Memory (MB): peak = 7326.727 ; gain = 622.754 ; free physical = 6301 ; free virtual = 13304
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'function128' is not ideal for floorplanning, since the cellview 'function128' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7382.746 ; gain = 0.000 ; free physical = 6226 ; free virtual = 13230
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  LD => LDCE: 1 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+12 Infos, 104 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:08 ; elapsed = 00:00:53 . Memory (MB): peak = 7414.758 ; gain = 713.957 ; free physical = 6236 ; free virtual = 13266
+design_1
+pwd
+/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1
+write_checkpoint rm2_synth.dcp
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 7565.898 ; gain = 0.000 ; free physical = 5911 ; free virtual = 12943
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint '/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/rm2_synth.dcp' has been generated.
+/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/rm2_synth.dcp
+close_project
+pwd
+/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1
+open_checkpoint top_synth.dcp
+Command: open_checkpoint top_synth.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7719.746 ; gain = 0.000 ; free physical = 5977 ; free virtual = 13017
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'function128' instantiated as 'inst_function128' [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/top/top.vhd:50]
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7719.746 ; gain = 0.000 ; free physical = 5879 ; free virtual = 12925
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2019.1 (64-bit) build 2552052
+checkpoint_top_synth
+read_xdc ./Sources/xdc/top_io_Arty_Z720.xdc
+Parsing XDC File [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/xdc/top_io_Arty_Z720.xdc]
+Finished Parsing XDC File [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/xdc/top_io_Arty_Z720.xdc]
+/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/xdc/top_io_Arty_Z720.xdc
+set_property HD.RECONFIGURABLE true [get_cells inst_function128]
+startgroup
+create_pblock pblock_inst_function128
+resize_pblock pblock_inst_function128 -add {SLICE_X84Y50:SLICE_X99Y100 DSP48_X3Y20:DSP48_X3Y39 RAMB18_X4Y20:RAMB18_X4Y39 RAMB36_X4Y10:RAMB36_X4Y19}
+add_cells_to_pblock pblock_inst_function128 [get_cells [list inst_function128]] -clear_locs
+endgroup
+resize_pblock pblock_inst_function128 -add {SLICE_X84Y50:SLICE_X99Y99 DSP48_X3Y20:DSP48_X3Y39 RAMB18_X4Y20:RAMB18_X4Y39 RAMB36_X4Y10:RAMB36_X4Y19} -remove {SLICE_X84Y50:SLICE_X99Y100 DSP48_X3Y20:DSP48_X3Y39 RAMB18_X4Y20:RAMB18_X4Y39 RAMB36_X4Y10:RAMB36_X4Y19} -locs keep_all
+set_property RESET_AFTER_RECONFIG 1 [get_pblocks pblock_inst_function128]
+set_property SNAPPING_MODE ROUTING [get_pblocks pblock_inst_function128]
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+create_drc_ruledeck ruledeck_1
+add_drc_checks -ruledeck ruledeck_1 [get_drc_checks {HDPRA-62 HDPRA-60 HDPRA-58 HDPRA-57 HDPRA-56 HDPRA-55 HDPRA-54 HDPRA-53 HDPRA-52 HDPRA-51 HDPRA-21 HDPR-43 HDPR-20 HDPR-88 HDPR-41 HDPR-40 HDPR-30 HDPR-96 HDPR-95 HDPR-94 HDPR-93 HDPR-92 HDPR-91 HDPR-90 HDPR-87 HDPR-86 HDPR-85 HDPR-84 HDPR-83 HDPR-74 HDPR-73 HDPR-72 HDPR-71 HDPR-70 HDPR-69 HDPR-68 HDPR-67 HDPR-66 HDPR-65 HDPR-64 HDPR-63 HDPR-62 HDPR-61 HDPR-60 HDPR-59 HDPR-58 HDPR-57 HDPR-54 HDPR-51 HDPR-50 HDPR-49 HDPR-48 HDPR-47 HDPR-46 HDPR-45 HDPR-44 HDPR-42 HDPR-38 HDPR-37 HDPR-36 HDPR-35 HDPR-34 HDPR-33 HDPR-32 HDPR-29 HDPR-28 HDPR-27 HDPR-26 HDPR-25 HDPR-23 HDPR-22 HDPR-18 HDPR-17 HDPR-16 HDPR-15 HDPR-14 HDPR-13 HDPR-12 HDPR-11 HDPR-10 HDPR-9 HDPR-8 HDPR-7 HDPR-6 HDPR-5 HDPR-4 HDPR-3 HDPR-2 HDPR-1}]
+report_drc -name drc_1 -ruledecks {ruledeck_1}
+Command: report_drc -name drc_1 -ruledecks ruledeck_1
+INFO: [DRC 23-27] Running DRC with 8 threads
+report_drc completed successfully
+delete_drc_ruledeck ruledeck_1
+add_file ./rm1_synth.dcp
+/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/rm1_synth.dcp
+refresh_design
+INFO: [Project 1-454] Reading design checkpoint '/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/rm1_synth.dcp' for cell 'inst_function128'
+INFO: [Netlist 29-17] Analyzing 154 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+WARNING: [Timing 38-476] Binary timing data restore encountered an issue: found incompatible netlist checksums (data written by Vivado 2019.1 with checksum 36e91563, read by Vivado 2019.1 with checksum bcd20d1b)
+WARNING: [Timing 38-477] Binary timing data restore failed. Reverting to non-binary load.
+Parsing XDC File [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/top_synth/top_early.xdc]
+Finished Parsing XDC File [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/top_synth/top_early.xdc]
+Parsing XDC File [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/xdc/top_io_Arty_Z720.xdc]
+Finished Parsing XDC File [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/xdc/top_io_Arty_Z720.xdc]
+startgroup
+create_pblock pblock_inst_function128
+resize_pblock pblock_inst_function128 -add {SLICE_X86Y50:SLICE_X101Y100 DSP48_X3Y20:DSP48_X3Y39 RAMB18_X4Y20:RAMB18_X4Y39 RAMB36_X4Y10:RAMB36_X4Y19}
+add_cells_to_pblock pblock_inst_function128 [get_cells [list inst_function128]] -clear_locs
+endgroup
+resize_pblock pblock_inst_function128 -add {SLICE_X86Y50:SLICE_X101Y99 DSP48_X3Y20:DSP48_X3Y39 RAMB18_X4Y20:RAMB18_X4Y39 RAMB36_X4Y10:RAMB36_X4Y19} -remove {SLICE_X86Y50:SLICE_X101Y100 DSP48_X3Y20:DSP48_X3Y39 RAMB18_X4Y20:RAMB18_X4Y39 RAMB36_X4Y10:RAMB36_X4Y19} -locs keep_all
+set_property RESET_AFTER_RECONFIG 1 [get_pblocks pblock_inst_function128]
+set_property SNAPPING_MODE ROUTING [get_pblocks pblock_inst_function128]
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+set_property SCOPED_TO_CELLS {inst_function128} [get_files ./rm1_synth.dcp]
+link_design -mode default -reconfig_partitions {inst_function128} -part xc7z020clg400-1 -top top
+Command: link_design -mode default -reconfig_partitions inst_function128 -part xc7z020clg400-1 -top top
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+CRITICAL WARNING: [Project 1-678] inst_function128 is not valid instance.
+INFO: [Netlist 29-17] Analyzing 122 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/xdc/top_io_Arty_Z720.xdc]
+Finished Parsing XDC File [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/xdc/top_io_Arty_Z720.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7719.746 ; gain = 0.000 ; free physical = 5472 ; free virtual = 12550
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+6 Infos, 0 Warnings, 1 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+design_1
+opt_design
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.96 . Memory (MB): peak = 7719.746 ; gain = 0.000 ; free physical = 5417 ; free virtual = 12498
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: cf9323d1
+
+Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.08 . Memory (MB): peak = 7786.309 ; gain = 66.562 ; free physical = 5415 ; free virtual = 12497
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: cf9323d1
+
+Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.05 . Memory (MB): peak = 7869.316 ; gain = 0.000 ; free physical = 5291 ; free virtual = 12399
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: cf9323d1
+
+Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.07 . Memory (MB): peak = 7869.316 ; gain = 0.000 ; free physical = 5291 ; free virtual = 12399
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: cf9323d1
+
+Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.08 . Memory (MB): peak = 7869.316 ; gain = 0.000 ; free physical = 5291 ; free virtual = 12399
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: cf9323d1
+
+Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.10 . Memory (MB): peak = 7869.316 ; gain = 0.000 ; free physical = 5291 ; free virtual = 12399
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: cf9323d1
+
+Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.11 . Memory (MB): peak = 7869.316 ; gain = 0.000 ; free physical = 5291 ; free virtual = 12399
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: cf9323d1
+
+Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.12 . Memory (MB): peak = 7869.316 ; gain = 0.000 ; free physical = 5291 ; free virtual = 12399
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 7869.316 ; gain = 0.000 ; free physical = 5291 ; free virtual = 12399
+Ending Logic Optimization Task | Checksum: cf9323d1
+
+Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.13 . Memory (MB): peak = 7869.316 ; gain = 0.000 ; free physical = 5291 ; free virtual = 12399
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=2.589 | TNS=0.000 |
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 2 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 4
+Ending PowerOpt Patch Enables Task | Checksum: cf9323d1
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 8035.082 ; gain = 0.000 ; free physical = 5282 ; free virtual = 12390
+Ending Power Optimization Task | Checksum: cf9323d1
+
+Time (s): cpu = 00:00:00.95 ; elapsed = 00:00:00.57 . Memory (MB): peak = 8035.082 ; gain = 165.766 ; free physical = 5286 ; free virtual = 12394
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: cf9323d1
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8035.082 ; gain = 0.000 ; free physical = 5286 ; free virtual = 12394
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8035.082 ; gain = 0.000 ; free physical = 5286 ; free virtual = 12394
+Ending Netlist Obfuscation Task | Checksum: cf9323d1
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8035.082 ; gain = 0.000 ; free physical = 5286 ; free virtual = 12394
+INFO: [Common 17-83] Releasing license: Implementation
+23 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+0
+place_design
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8054.090 ; gain = 0.000 ; free physical = 5308 ; free virtual = 12388
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 2dab9e45
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.03 . Memory (MB): peak = 8054.090 ; gain = 0.000 ; free physical = 5308 ; free virtual = 12388
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8054.090 ; gain = 0.000 ; free physical = 5308 ; free virtual = 12388
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+ERROR: [Place 30-188] UnBuffered IOs: clk has following unbuffered loads :  current_stata_reg[0](FDSE)  current_stata_reg[1](FDRE)  current_stata_reg[2](FDRE)  current_stata_reg[3](FDRE)  current_stata_reg[4](FDRE)  current_stata_reg[5](FDRE)  current_stata_reg[6](FDRE)  current_stata_reg[7](FDRE)  current_stata_reg[0](FDRE)  current_stata_reg[100](FDRE)  current_stata_reg[101](FDRE)  current_stata_reg[102](FDRE)  current_stata_reg[103](FDRE)  current_stata_reg[104](FDRE)  current_stata_reg[105](FDRE)  current_stata_reg[106](FDRE)  current_stata_reg[107](FDRE)  current_stata_reg[108](FDRE)  current_stata_reg[109](FDRE)  current_stata_reg[10](FDRE)  current_stata_reg[110](FDRE)  current_stata_reg[111](FDRE)  current_stata_reg[112](FDRE)  current_stata_reg[113](FDRE)  current_stata_reg[114](FDRE)  current_stata_reg[115](FDRE)  current_stata_reg[116](FDRE)  current_stata_reg[117](FDRE)  current_stata_reg[118](FDRE)  current_stata_reg[119](FDRE)  current_stata_reg[11](FDRE)  current_stata_reg[120](FDRE)  current_stata_reg[121](FDRE)  current_stata_reg[122](FDRE)  current_stata_reg[123](FDRE)  current_stata_reg[124](FDRE)  current_stata_reg[125](FDRE)  current_stata_reg[126](FDRE)  current_stata_reg[127](FDRE)  current_stata_reg[12](FDRE)  current_stata_reg[13](FDRE)  current_stata_reg[14](FDRE)  current_stata_reg[15](FDRE)  current_stata_reg[16](FDRE)  current_stata_reg[17](FDRE)  current_stata_reg[18](FDRE)  current_stata_reg[19](FDRE)  current_stata_reg[1](FDRE)  current_stata_reg[20](FDRE)  current_stata_reg[21](FDRE)  current_stata_reg[22](FDRE)  current_stata_reg[23](FDRE)  current_stata_reg[24](FDRE)  current_stata_reg[25](FDRE)  current_stata_reg[26](FDRE)  current_stata_reg[27](FDRE)  current_stata_reg[28](FDRE)  current_stata_reg[29](FDRE)  current_stata_reg[2](FDRE)  current_stata_reg[30](FDRE)  current_stata_reg[31](FDRE)  current_stata_reg[32](FDRE)  current_stata_reg[33](FDRE)  current_stata_reg[34](FDRE)  current_stata_reg[35](FDRE)  current_stata_reg[36](FDRE)  current_stata_reg[37](FDRE)  current_stata_reg[38](FDRE)  current_stata_reg[39](FDRE)  current_stata_reg[3](FDRE)  current_stata_reg[40](FDRE)  current_stata_reg[41](FDRE)  current_stata_reg[42](FDRE)  current_stata_reg[43](FDRE)  current_stata_reg[44](FDRE)  current_stata_reg[45](FDRE)  current_stata_reg[46](FDRE)  current_stata_reg[47](FDRE)  current_stata_reg[48](FDRE)  current_stata_reg[49](FDRE)  current_stata_reg[4](FDRE)  current_stata_reg[50](FDRE)  current_stata_reg[51](FDRE)  current_stata_reg[52](FDRE)  current_stata_reg[53](FDRE)  current_stata_reg[54](FDRE)  current_stata_reg[55](FDRE)  current_stata_reg[56](FDRE)  current_stata_reg[57](FDRE)  current_stata_reg[58](FDRE)  current_stata_reg[59](FDRE)  current_stata_reg[5](FDRE)  current_stata_reg[60](FDRE)  current_stata_reg[61](FDRE)  current_stata_reg[62](FDRE)  current_stata_reg[63](FDRE)  current_stata_reg[64](FDRE)  current_stata_reg[65](FDRE)  current_stata_reg[66](FDRE)  current_stata_reg[67](FDRE)  current_stata_reg[68](FDRE)  current_stata_reg[69](FDRE)  current_stata_reg[6](FDRE)  current_stata_reg[70](FDRE)  current_stata_reg[71](FDRE)  current_stata_reg[72](FDRE)  current_stata_reg[73](FDRE)  current_stata_reg[74](FDRE)  current_stata_reg[75](FDRE)  current_stata_reg[76](FDRE)  current_stata_reg[77](FDRE)  current_stata_reg[78](FDRE)  current_stata_reg[79](FDRE)  current_stata_reg[7](FDRE)  current_stata_reg[80](FDRE)  current_stata_reg[81](FDRE)  current_stata_reg[82](FDRE)  current_stata_reg[83](FDRE)  current_stata_reg[84](FDRE)  current_stata_reg[85](FDRE)  current_stata_reg[86](FDRE)  current_stata_reg[87](FDRE)  current_stata_reg[88](FDRE)  current_stata_reg[89](FDRE)  current_stata_reg[8](FDRE)  current_stata_reg[90](FDRE)  current_stata_reg[91](FDRE)  current_stata_reg[92](FDRE)  current_stata_reg[93](FDRE)  current_stata_reg[94](FDRE)  current_stata_reg[95](FDRE)  current_stata_reg[96](FDRE)  current_stata_reg[97](FDRE)  current_stata_reg[98](FDRE)  current_stata_reg[99](FDRE)  current_stata_reg[9](FDRE)  current_stata_reg_rep_bsel(RAMB18E1)  current_stata_reg_rep_bsel__0(RAMB18E1)  current_stata_reg_rep_bsel(RAMB18E1)  current_stata_reg_rep_bsel__0(RAMB18E1)  current_stata_reg[0](FDRE)  current_stata_reg[100](FDRE)  current_stata_reg[101](FDRE)  current_stata_reg[102](FDRE)  current_stata_reg[103](FDRE)  current_stata_reg[104](FDRE)  current_stata_reg[105](FDRE)  current_stata_reg[106](FDRE)  current_stata_reg[107](FDRE)  current_stata_reg[108](FDRE)  current_stata_reg[109](FDRE)  current_stata_reg[10](FDRE)  current_stata_reg[110](FDRE)  current_stata_reg[111](FDRE)  current_stata_reg[112](FDRE)  current_stata_reg[113](FDRE)  current_stata_reg[114](FDRE)  current_stata_reg[115](FDRE)  current_stata_reg[116](FDRE)  current_stata_reg[117](FDRE)  current_stata_reg[118](FDRE)  current_stata_reg[119](FDRE)  current_stata_reg[11](FDRE)  current_stata_reg[120](FDRE)  current_stata_reg[121](FDRE)  current_stata_reg[122](FDRE)  current_stata_reg[123](FDRE)  current_stata_reg[124](FDRE)  current_stata_reg[125](FDRE)  current_stata_reg[126](FDRE)  current_stata_reg[127](FDRE)  current_stata_reg[12](FDRE)  current_stata_reg[13](FDRE)  current_stata_reg[14](FDRE)  current_stata_reg[15](FDRE)  current_stata_reg[16](FDRE)  current_stata_reg[17](FDRE)  current_stata_reg[18](FDRE)  current_stata_reg[19](FDRE)  current_stata_reg[1](FDRE)  current_stata_reg[20](FDRE)  current_stata_reg[21](FDRE)  current_stata_reg[22](FDRE)  current_stata_reg[23](FDRE)  current_stata_reg[24](FDRE)  current_stata_reg[25](FDRE)  current_stata_reg[26](FDRE)  current_stata_reg[27](FDRE)  current_stata_reg[28](FDRE)  current_stata_reg[29](FDRE)  current_stata_reg[2](FDRE)  current_stata_reg[30](FDRE)  current_stata_reg[31](FDRE)  current_stata_reg[32](FDRE)  current_stata_reg[33](FDRE)  current_stata_reg[34](FDRE)  current_stata_reg[35](FDRE)  current_stata_reg[36](FDRE)  current_stata_reg[37](FDRE)  current_stata_reg[38](FDRE)  current_stata_reg[39](FDRE)  current_stata_reg[3](FDRE)  current_stata_reg[40](FDRE)  current_stata_reg[41](FDRE)  current_stata_reg[42](FDRE)  current_stata_reg[43](FDRE)  current_stata_reg[44](FDRE)  current_stata_reg[45](FDRE)  current_stata_reg[46](FDRE)  current_stata_reg[47](FDRE)  current_stata_reg[48](FDRE)  current_stata_reg[49](FDRE)  current_stata_reg[4](FDRE)  current_stata_reg[50](FDRE)  current_stata_reg[51](FDRE)  current_stata_reg[52](FDRE)  current_stata_reg[53](FDRE)  current_stata_reg[54](FDRE)  current_stata_reg[55](FDRE)  current_stata_reg[56](FDRE)  current_stata_reg[57](FDRE)  current_stata_reg[58](FDRE)  current_stata_reg[59](FDRE)  current_stata_reg[5](FDRE)  current_stata_reg[60](FDRE)  current_stata_reg[61](FDRE)  current_stata_reg[62](FDRE)  current_stata_reg[63](FDRE)  current_stata_reg[64](FDRE)  current_stata_reg[65](FDRE)  current_stata_reg[66](FDRE)  current_stata_reg[67](FDRE)  current_stata_reg[68](FDRE)  current_stata_reg[69](FDRE)  current_stata_reg[6](FDRE)  current_stata_reg[70](FDRE)  current_stata_reg[71](FDRE)  current_stata_reg[72](FDRE)  current_stata_reg[73](FDRE)  current_stata_reg[74](FDRE)  current_stata_reg[75](FDRE)  current_stata_reg[76](FDRE)  current_stata_reg[77](FDRE)  current_stata_reg[78](FDRE)  current_stata_reg[79](FDRE)  current_stata_reg[7](FDRE)  current_stata_reg[80](FDRE)  current_stata_reg[81](FDRE)  current_stata_reg[82](FDRE)  current_stata_reg[83](FDRE)  current_stata_reg[84](FDRE)  current_stata_reg[85](FDRE)  current_stata_reg[86](FDRE)  current_stata_reg[87](FDRE)  current_stata_reg[88](FDRE)  current_stata_reg[89](FDRE)  current_stata_reg[8](FDRE)  current_stata_reg[90](FDRE)  current_stata_reg[91](FDRE)  current_stata_reg[92](FDRE)  current_stata_reg[93](FDRE)  current_stata_reg[94](FDRE)  current_stata_reg[95](FDRE)  current_stata_reg[96](FDRE)  current_stata_reg[97](FDRE)  current_stata_reg[98](FDRE)  current_stata_reg[99](FDRE)  current_stata_reg[9](FDRE)
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 32befc8e
+
+Time (s): cpu = 00:00:00.52 ; elapsed = 00:00:00.27 . Memory (MB): peak = 8054.090 ; gain = 0.000 ; free physical = 5307 ; free virtual = 12387
+Phase 1 Placer Initialization | Checksum: 32befc8e
+
+Time (s): cpu = 00:00:00.53 ; elapsed = 00:00:00.27 . Memory (MB): peak = 8054.090 ; gain = 0.000 ; free physical = 5307 ; free virtual = 12387
+ERROR: [Place 30-99] Placer failed with error: 'Implementation Feasibility check failed, Please see the previously displayed individual error or warning messages for more details.'
+Please review all ERROR, CRITICAL WARNING, and WARNING messages during placement to understand the cause for failure.
+Ending Placer Task | Checksum: 32befc8e
+
+Time (s): cpu = 00:00:00.55 ; elapsed = 00:00:00.28 . Memory (MB): peak = 8054.090 ; gain = 0.000 ; free physical = 5307 ; free virtual = 12387
+INFO: [Common 17-83] Releasing license: Implementation
+10 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+place_design failed
+ERROR: [Common 17-69] Command failed: Placer could not place all instances
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 15 15:56:42 2019...

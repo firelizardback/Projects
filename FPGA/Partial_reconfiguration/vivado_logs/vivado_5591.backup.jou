@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Dec 15 16:01:24 2019
+# Process ID: 5591
+# Current directory: /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1
+# Command line: vivado
+# Log file: /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/vivado.log
+# Journal file: /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/vivado.jou
+#-----------------------------------------------------------
+start_gui
+add_file ./top_synth.dcp

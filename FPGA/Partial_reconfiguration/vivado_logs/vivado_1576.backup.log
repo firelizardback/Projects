@@ -1,0 +1,672 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Dec 15 15:16:50 2019
+# Process ID: 1576
+# Current directory: /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1
+# Command line: vivado
+# Log file: /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/vivado.log
+# Journal file: /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/top/top.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+create_ip -name vio -vendor xilinx.com -library ip -version 3.0 -module_name vio_test
+set_property -dict [list CONFIG.C_PROBE_OUT1_WIDTH {128} CONFIG.C_PROBE_OUT0_WIDTH {128} CONFIG.C_PROBE_IN0_WIDTH {128} CONFIG.C_NUM_PROBE_OUT {3} CONFIG.C_NUM_PROBE_IN {2} CONFIG.Component_Name {vio_test}] [get_ips vio_test]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'vio_test' to 'vio_test' is not allowed and is ignored.
+generate_target {instantiation_template} [get_files /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/top/top.srcs/sources_1/ip/vio_test/vio_test.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'vio_test'...
+generate_target all [get_files  /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/top/top.srcs/sources_1/ip/vio_test/vio_test.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'vio_test'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'vio_test'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'vio_test'...
+catch { config_ip_cache -export [get_ips -all vio_test] }
+export_ip_user_files -of_objects [get_files /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/top/top.srcs/sources_1/ip/vio_test/vio_test.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/top/top.srcs/sources_1/ip/vio_test/vio_test.xci]
+launch_runs -jobs 4 vio_test_synth_1
+[Sun Dec 15 15:19:44 2019] Launched vio_test_synth_1...
+Run output will be captured here: /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/top/top.runs/vio_test_synth_1/runme.log
+export_simulation -of_objects [get_files /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/top/top.srcs/sources_1/ip/vio_test/vio_test.xci] -directory /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/top/top.ip_user_files/sim_scripts -ip_user_files_dir /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/top/top.ip_user_files -ipstatic_source_dir /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/top/top.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/top/top.cache/compile_simlib/modelsim} {questa=/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/top/top.cache/compile_simlib/questa} {ies=/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/top/top.cache/compile_simlib/ies} {xcelium=/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/top/top.cache/compile_simlib/xcelium} {vcs=/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/top/top.cache/compile_simlib/vcs} {riviera=/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/top/top.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+synth_design -top top -part xc7z020clg400-1
+Command: synth_design -top top -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 2495 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 7106.488 ; gain = 150.684 ; free physical = 6386 ; free virtual = 13311
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/top/top.vhd:9]
+INFO: [Synth 8-3491] module 'vio_test' declared at '/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/.Xil/Vivado-1576-hamed-PC/realtime/vio_test_stub.vhdl:5' bound to instance 'inst_vio_test' of component 'vio_test' [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/top/top.vhd:40]
+INFO: [Synth 8-638] synthesizing module 'vio_test' [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/.Xil/Vivado-1576-hamed-PC/realtime/vio_test_stub.vhdl:17]
+INFO: [Synth 8-637] synthesizing blackbox instance 'inst_function128' of component 'function128' [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/top/top.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'top' (1#1) [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/top/top.vhd:9]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 7135.426 ; gain = 179.621 ; free physical = 6416 ; free virtual = 13342
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 7153.238 ; gain = 197.434 ; free physical = 6414 ; free virtual = 13340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 7153.238 ; gain = 197.434 ; free physical = 6414 ; free virtual = 13340
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/top/top.srcs/sources_1/ip/vio_test/vio_test/vio_test_in_context.xdc] for cell 'inst_vio_test'
+Finished Parsing XDC File [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/top/top.srcs/sources_1/ip/vio_test/vio_test/vio_test_in_context.xdc] for cell 'inst_vio_test'
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7219.004 ; gain = 0.000 ; free physical = 6329 ; free virtual = 13255
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7219.004 ; gain = 0.000 ; free physical = 6322 ; free virtual = 13255
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 7219.004 ; gain = 263.199 ; free physical = 6407 ; free virtual = 13320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 7219.004 ; gain = 263.199 ; free physical = 6407 ; free virtual = 13320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 7219.004 ; gain = 263.199 ; free physical = 6409 ; free virtual = 13321
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 7219.004 ; gain = 263.199 ; free physical = 6407 ; free virtual = 13321
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 7219.004 ; gain = 263.199 ; free physical = 6404 ; free virtual = 13320
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 7219.004 ; gain = 263.199 ; free physical = 6288 ; free virtual = 13203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 7219.004 ; gain = 263.199 ; free physical = 6288 ; free virtual = 13203
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 7219.004 ; gain = 263.199 ; free physical = 6286 ; free virtual = 13201
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 7219.004 ; gain = 263.199 ; free physical = 6285 ; free virtual = 13200
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 7219.004 ; gain = 263.199 ; free physical = 6285 ; free virtual = 13200
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 7219.004 ; gain = 263.199 ; free physical = 6285 ; free virtual = 13200
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 7219.004 ; gain = 263.199 ; free physical = 6285 ; free virtual = 13200
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 7219.004 ; gain = 263.199 ; free physical = 6285 ; free virtual = 13200
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 7219.004 ; gain = 263.199 ; free physical = 6285 ; free virtual = 13200
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |vio_test      |         1|
+|2     |function128   |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-------------------+------+
+|      |Cell               |Count |
++------+-------------------+------+
+|1     |function128_bbox_1 |     1|
+|2     |vio_test_bbox_0    |     1|
+|3     |IBUF               |     1|
++------+-------------------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   387|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 7219.004 ; gain = 263.199 ; free physical = 6285 ; free virtual = 13200
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 7219.004 ; gain = 197.434 ; free physical = 6341 ; free virtual = 13256
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 7219.004 ; gain = 263.199 ; free physical = 6341 ; free virtual = 13256
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-454] Reading design checkpoint '/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/top/top.srcs/sources_1/ip/vio_test/vio_test.dcp' for cell 'inst_vio_test'
+INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Chipscope 16-324] Core: inst_vio_test UUID: d43517d4-b626-5afb-bad5-9b023cd1e707 
+Parsing XDC File [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/top/top.srcs/sources_1/ip/vio_test/vio_test.xdc] for cell 'inst_vio_test'
+Finished Parsing XDC File [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/top/top.srcs/sources_1/ip/vio_test/vio_test.xdc] for cell 'inst_vio_test'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'function128' instantiated as 'inst_function128' [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/top/top.vhd:50]
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7277.707 ; gain = 0.000 ; free physical = 6281 ; free virtual = 13196
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+19 Infos, 0 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:22 . Memory (MB): peak = 7423.676 ; gain = 585.426 ; free physical = 6257 ; free virtual = 13194
+design_1
+pwd
+/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1
+write_checkpoint top_synth.dcp
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7586.777 ; gain = 0.000 ; free physical = 5946 ; free virtual = 12897
+INFO: [Timing 38-480] Writing timing data to binary archive.
+INFO: [Common 17-1381] The checkpoint '/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/top_synth.dcp' has been generated.
+/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/top_synth.dcp
+close_project
+create_project aes128_enc /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/aes128_enc -part xc7z020clg400-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
+set_property board_part digilentinc.com:arty-z7-20:part0:1.0 [current_project]
+set_property target_language VHDL [current_project]
+add_files -norecurse /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/aes128_enc.vhd
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/aes128_enc.vhd] -no_script -reset -force -quiet
+remove_files  /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/aes128_enc.vhd
+add_files {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/sbox.vhd /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/key_sch_round_function.vhd /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/reg.vhd /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/gfmult_by2.vhd /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/mix_columns.vhd /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/column_calculator.vhd /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/add_round_key.vhd /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/aes128_enc.vhd /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/sub_byte.vhd /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/shift_rwos.vhd /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/controller.vhd /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/key_schedule.vhd}
+update_compile_order -fileset sources_1
+pwd
+/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1
+synth_design -top function128 -part xc7z020clg400-1 -mode out_of_context
+Command: synth_design -top function128 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 3097 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 7609.613 ; gain = 13.898 ; free physical = 5731 ; free virtual = 12748
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'function128' [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/aes128_enc.vhd:31]
+INFO: [Synth 8-638] synthesizing module '\reg ' [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/reg.vhd:29]
+	Parameter size bound to: 128 - type: integer 
+INFO: [Synth 8-256] done synthesizing module '\reg ' (1#1) [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/reg.vhd:29]
+INFO: [Synth 8-638] synthesizing module 'add_round_key' [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/add_round_key.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'add_round_key' (2#1) [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/add_round_key.vhd:29]
+INFO: [Synth 8-638] synthesizing module 'sub_byte' [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/sub_byte.vhd:27]
+INFO: [Synth 8-638] synthesizing module 'sbox' [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/sbox.vhd:27]
+INFO: [Synth 8-226] default block is never used [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/sbox.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'sbox' (3#1) [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/sbox.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'sub_byte' (4#1) [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/sub_byte.vhd:27]
+INFO: [Synth 8-638] synthesizing module 'shift_rows' [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/shift_rwos.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'shift_rows' (5#1) [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/shift_rwos.vhd:27]
+INFO: [Synth 8-638] synthesizing module 'mix_columns' [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/mix_columns.vhd:27]
+INFO: [Synth 8-638] synthesizing module 'column_calculator' [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/column_calculator.vhd:27]
+INFO: [Synth 8-638] synthesizing module 'gfmult_by2' [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/gfmult_by2.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'gfmult_by2' (6#1) [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/gfmult_by2.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'column_calculator' (7#1) [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/column_calculator.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'mix_columns' (8#1) [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/mix_columns.vhd:27]
+INFO: [Synth 8-638] synthesizing module 'controller' [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/controller.vhd:30]
+INFO: [Synth 8-638] synthesizing module 'reg__parameterized0' [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/reg.vhd:29]
+	Parameter size bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'reg__parameterized0' (8#1) [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/reg.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'controller' (9#1) [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/controller.vhd:30]
+INFO: [Synth 8-638] synthesizing module 'key_schedule' [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/key_schedule.vhd:30]
+INFO: [Synth 8-638] synthesizing module 'key_sch_round_function' [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/key_sch_round_function.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'key_sch_round_function' (10#1) [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/key_sch_round_function.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'key_schedule' (11#1) [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/key_schedule.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'function128' (12#1) [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Sources/hdl/aes128_enc/aes128_enc.vhd:31]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 7635.551 ; gain = 39.836 ; free physical = 5760 ; free virtual = 12776
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 7653.363 ; gain = 57.648 ; free physical = 5762 ; free virtual = 12778
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 7661.367 ; gain = 65.652 ; free physical = 5762 ; free virtual = 12778
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 7661.367 ; gain = 65.652 ; free physical = 5753 ; free virtual = 12772
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+	   2 Input     32 Bit         XORs := 3     
+	   2 Input     24 Bit         XORs := 1     
+	   2 Input      8 Bit         XORs := 37    
+	   3 Input      8 Bit         XORs := 17    
++---Registers : 
+	              128 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module function128 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 2     
+Module reg 
+Detailed RTL Component Info : 
++---Registers : 
+	              128 Bit    Registers := 1     
+Module add_round_key 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+Module gfmult_by2 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      8 Bit         XORs := 1     
+Module column_calculator 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      8 Bit         XORs := 5     
+	   3 Input      8 Bit         XORs := 4     
+Module reg__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+Module controller 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module key_sch_round_function 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     32 Bit         XORs := 3     
+	   2 Input     24 Bit         XORs := 1     
+	   3 Input      8 Bit         XORs := 1     
+Module key_schedule 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 7693.398 ; gain = 97.684 ; free physical = 5731 ; free virtual = 12748
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+-------------------------------------------------------+---------------+----------------+
+|Module Name | RTL Object                                            | Depth x Width | Implemented As | 
++------------+-------------------------------------------------------+---------------+----------------+
+|sbox        | output_byte                                           | 256x8         | LUT            | 
+|function128 | sub_byte_inst/gen[5].sbox_inst/output_byte            | 256x8         | LUT            | 
+|function128 | sub_byte_inst/gen[10].sbox_inst/output_byte           | 256x8         | LUT            | 
+|function128 | sub_byte_inst/gen[15].sbox_inst/output_byte           | 256x8         | LUT            | 
+|function128 | sub_byte_inst/gen[4].sbox_inst/output_byte            | 256x8         | LUT            | 
+|function128 | sub_byte_inst/gen[9].sbox_inst/output_byte            | 256x8         | LUT            | 
+|function128 | sub_byte_inst/gen[14].sbox_inst/output_byte           | 256x8         | LUT            | 
+|function128 | sub_byte_inst/gen[3].sbox_inst/output_byte            | 256x8         | LUT            | 
+|function128 | sub_byte_inst/gen[8].sbox_inst/output_byte            | 256x8         | LUT            | 
+|function128 | sub_byte_inst/gen[13].sbox_inst/output_byte           | 256x8         | LUT            | 
+|function128 | sub_byte_inst/gen[2].sbox_inst/output_byte            | 256x8         | LUT            | 
+|function128 | sub_byte_inst/gen[7].sbox_inst/output_byte            | 256x8         | LUT            | 
+|function128 | sub_byte_inst/gen[12].sbox_inst/output_byte           | 256x8         | LUT            | 
+|function128 | sub_byte_inst/gen[1].sbox_inst/output_byte            | 256x8         | LUT            | 
+|function128 | sub_byte_inst/gen[6].sbox_inst/output_byte            | 256x8         | LUT            | 
+|function128 | sub_byte_inst/gen[11].sbox_inst/output_byte           | 256x8         | LUT            | 
+|function128 | key_schedule_inst/reg_inst/current_stata_reg_rep_bsel | 256x8         | Block RAM      | 
+|function128 | key_schedule_inst/reg_inst/current_stata_reg_rep_bsel | 256x8         | Block RAM      | 
+|function128 | key_schedule_inst/reg_inst/current_stata_reg_rep_bsel | 256x8         | Block RAM      | 
+|function128 | key_schedule_inst/reg_inst/current_stata_reg_rep_bsel | 256x8         | Block RAM      | 
++------------+-------------------------------------------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance i_0/key_schedule_inst/reg_inst/current_stata_reg_rep_bsel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_1/key_schedule_inst/reg_inst/current_stata_reg_rep_bsel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_2/key_schedule_inst/reg_inst/current_stata_reg_rep_bsel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_3/key_schedule_inst/reg_inst/current_stata_reg_rep_bsel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 7693.398 ; gain = 97.684 ; free physical = 5749 ; free virtual = 12766
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance key_schedule_inst/reg_inst/current_stata_reg_rep_bsel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance key_schedule_inst/reg_inst/current_stata_reg_rep_bsel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance key_schedule_inst/reg_inst/current_stata_reg_rep_bsel__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance key_schedule_inst/reg_inst/current_stata_reg_rep_bsel__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 7693.398 ; gain = 97.684 ; free physical = 5751 ; free virtual = 12768
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 7693.398 ; gain = 97.684 ; free physical = 5744 ; free virtual = 12761
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 7693.398 ; gain = 97.684 ; free physical = 5744 ; free virtual = 12761
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 7693.398 ; gain = 97.684 ; free physical = 5744 ; free virtual = 12761
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 7693.398 ; gain = 97.684 ; free physical = 5744 ; free virtual = 12761
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 7693.398 ; gain = 97.684 ; free physical = 5750 ; free virtual = 12767
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 7693.398 ; gain = 97.684 ; free physical = 5750 ; free virtual = 12767
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |LUT1     |     1|
+|2     |LUT2     |   131|
+|3     |LUT3     |     8|
+|4     |LUT4     |   162|
+|5     |LUT5     |   122|
+|6     |LUT6     |   800|
+|7     |MUXF7    |   120|
+|8     |RAMB18E1 |     2|
+|9     |FDRE     |   263|
+|10    |FDSE     |     1|
++------+---------+------+
+
+Report Instance Areas: 
++------+------------------------+--------------------+------+
+|      |Instance                |Module              |Cells |
++------+------------------------+--------------------+------+
+|1     |top                     |                    |  1610|
+|2     |  controller_inst       |controller          |    16|
+|3     |    reg_inst            |reg__parameterized0 |    16|
+|4     |  key_schedule_inst     |key_schedule        |  1218|
+|5     |    reg_inst            |reg_15              |  1218|
+|6     |  reg_inst              |\reg                |   128|
+|7     |  sub_byte_inst         |sub_byte            |   248|
+|8     |    \gen[0].sbox_inst   |sbox                |    18|
+|9     |    \gen[10].sbox_inst  |sbox_0              |     8|
+|10    |    \gen[11].sbox_inst  |sbox_1              |    18|
+|11    |    \gen[12].sbox_inst  |sbox_2              |    18|
+|12    |    \gen[13].sbox_inst  |sbox_3              |    18|
+|13    |    \gen[14].sbox_inst  |sbox_4              |     8|
+|14    |    \gen[15].sbox_inst  |sbox_5              |    18|
+|15    |    \gen[1].sbox_inst   |sbox_6              |    18|
+|16    |    \gen[2].sbox_inst   |sbox_7              |     8|
+|17    |    \gen[3].sbox_inst   |sbox_8              |    18|
+|18    |    \gen[4].sbox_inst   |sbox_9              |    18|
+|19    |    \gen[5].sbox_inst   |sbox_10             |    18|
+|20    |    \gen[6].sbox_inst   |sbox_11             |     8|
+|21    |    \gen[7].sbox_inst   |sbox_12             |    18|
+|22    |    \gen[8].sbox_inst   |sbox_13             |    18|
+|23    |    \gen[9].sbox_inst   |sbox_14             |    18|
++------+------------------------+--------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 7693.398 ; gain = 97.684 ; free physical = 5750 ; free virtual = 12767
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 7693.398 ; gain = 97.684 ; free physical = 5752 ; free virtual = 12769
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 7693.406 ; gain = 97.684 ; free physical = 5752 ; free virtual = 12769
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 122 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7693.406 ; gain = 0.000 ; free physical = 5708 ; free virtual = 12705
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+43 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 7760.457 ; gain = 164.742 ; free physical = 5726 ; free virtual = 12751
+design_1
+write_checkpoint rm1_synth.dcp
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7760.457 ; gain = 0.000 ; free physical = 5775 ; free virtual = 12781
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint '/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/rm1_synth.dcp' has been generated.
+/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/rm1_synth.dcp
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 15 15:30:22 2019...

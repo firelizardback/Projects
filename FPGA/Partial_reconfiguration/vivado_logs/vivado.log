@@ -1,0 +1,366 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Dec 15 17:16:17 2019
+# Process ID: 31464
+# Current directory: /home/hamed/FPGA/Partial_reconfiguration/step_by_step/final
+# Command line: vivado
+# Log file: /home/hamed/FPGA/Partial_reconfiguration/step_by_step/final/vivado.log
+# Journal file: /home/hamed/FPGA/Partial_reconfiguration/step_by_step/final/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_hw
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:06:40
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/003017A7024AA
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+set_property PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/final/probes.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/final/probes.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/final/Config_aes.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 VIO core(s).
+INFO: [Labtools 27-1889] Uploading output probe values for VIO core [hw_vio_1]
+set_property OUTPUT_VALUE 00000000000000000000000040200000 [get_hw_probes x -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+commit_hw_vio [get_hw_probes {x} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+set_property OUTPUT_VALUE 000000000000000000000000C11B3333 [get_hw_probes y -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+commit_hw_vio [get_hw_probes {y} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+set_property OUTPUT_VALUE 1 [get_hw_probes rst -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+commit_hw_vio [get_hw_probes {rst} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+set_property OUTPUT_VALUE 0 [get_hw_probes rst -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+commit_hw_vio [get_hw_probes {rst} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+set_property PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/final/probes.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/final/probes.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/final/Config_mult_pblock_inst_function128_partial.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 VIO core(s).
+set_property PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/final/probes.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/final/probes.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/final/Config_aes_pblock_inst_function128_partial.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 VIO core(s).
+set_property OUTPUT_VALUE 1 [get_hw_probes rst -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+commit_hw_vio [get_hw_probes {rst} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+set_property OUTPUT_VALUE 0 [get_hw_probes rst -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+commit_hw_vio [get_hw_probes {rst} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+set_property PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/final/probes.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/final/probes.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/final/Config_mult_pblock_inst_function128_partial.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 VIO core(s).
+set_property OUTPUT_VALUE 1 [get_hw_probes rst -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+commit_hw_vio [get_hw_probes {rst} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+set_property OUTPUT_VALUE 0 [get_hw_probes rst -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+commit_hw_vio [get_hw_probes {rst} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+close_project
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /home/hamed/FPGA/Partial_reconfiguration/step_by_step/final/.Xil/Vivado-31464-hamed-PC/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-186] '/home/hamed/FPGA/Partial_reconfiguration/step_by_step/final/.Xil/Vivado-31464-hamed-PC/webtalk/usage_statistics_ext_labtool.xml' has been successfully sent to Xilinx on Sun Dec 15 18:25:36 2019. For additional details about this file, please refer to the WebTalk help file at /tools/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Sun Dec 15 18:25:36 2019...
+open_project /home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+set_property -dict [list CONFIG.C_NUM_PROBE_OUT {3}] [get_ips vio_0]
+generate_target all [get_files  /home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/ip/vio_0/vio_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'vio_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'vio_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'vio_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'vio_0'...
+catch { config_ip_cache -export [get_ips -all vio_0] }
+export_ip_user_files -of_objects [get_files /home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/ip/vio_0/vio_0.xci] -no_script -sync -force -quiet
+reset_run vio_0_synth_1
+launch_runs -jobs 4 vio_0_synth_1
+[Sun Dec 15 18:31:48 2019] Launched vio_0_synth_1...
+Run output will be captured here: /home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.runs/vio_0_synth_1/runme.log
+export_simulation -of_objects [get_files /home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/ip/vio_0/vio_0.xci] -directory /home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.ip_user_files/sim_scripts -ip_user_files_dir /home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.ip_user_files -ipstatic_source_dir /home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.cache/compile_simlib/modelsim} {questa=/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.cache/compile_simlib/questa} {ies=/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.cache/compile_simlib/ies} {xcelium=/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.cache/compile_simlib/xcelium} {vcs=/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.cache/compile_simlib/vcs} {riviera=/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sun Dec 15 18:32:51 2019] Launched synth_1...
+Run output will be captured here: /home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.runs/synth_1/runme.log
+[Sun Dec 15 18:32:51 2019] Launched impl_1...
+Run output will be captured here: /home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:06:40
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/003017A7024AA
+set_property PROGRAM.FILE {/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.runs/impl_1/top_module.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.runs/impl_1/top_module.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.runs/impl_1/top_module.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 VIO core(s).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'vio_test' at location 'uuid_0BD50595E9785322B9D3C3AB99E7430E' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-1974] Mismatch between the design programmed into the device xc7z020_1 and the probes file(s) /home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.runs/impl_1/top_module.ltx.
+The device design has 0 ILA core(s) and 1 VIO core(s). 0 ILA core(s) and 0 VIO core(s) are matched in the probes file(s).
+Resolution: 
+1. Reprogram device with the correct programming file and associated probes file(s) OR
+2. Goto device properties and associate the correct probes file(s) with the programming file already programmed in the device.
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 VIO core(s).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'vio_test' at location 'uuid_0BD50595E9785322B9D3C3AB99E7430E' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-1974] Mismatch between the design programmed into the device xc7z020_1 and the probes file(s) /home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.runs/impl_1/top_module.ltx.
+The device design has 0 ILA core(s) and 1 VIO core(s). 0 ILA core(s) and 0 VIO core(s) are matched in the probes file(s).
+Resolution: 
+1. Reprogram device with the correct programming file and associated probes file(s) OR
+2. Goto device properties and associate the correct probes file(s) with the programming file already programmed in the device.
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 VIO core(s).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'vio_test' at location 'uuid_0BD50595E9785322B9D3C3AB99E7430E' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-1974] Mismatch between the design programmed into the device xc7z020_1 and the probes file(s) /home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.runs/impl_1/top_module.ltx.
+The device design has 0 ILA core(s) and 1 VIO core(s). 0 ILA core(s) and 0 VIO core(s) are matched in the probes file(s).
+Resolution: 
+1. Reprogram device with the correct programming file and associated probes file(s) OR
+2. Goto device properties and associate the correct probes file(s) with the programming file already programmed in the device.
+set_property PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 VIO core(s).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'vio_test' at location 'uuid_0BD50595E9785322B9D3C3AB99E7430E' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-1974] Mismatch between the design programmed into the device xc7z020_1 and the probes file(s) /home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.runs/impl_1/debug_nets.ltx.
+The device design has 0 ILA core(s) and 1 VIO core(s). 0 ILA core(s) and 0 VIO core(s) are matched in the probes file(s).
+Resolution: 
+1. Reprogram device with the correct programming file and associated probes file(s) OR
+2. Goto device properties and associate the correct probes file(s) with the programming file already programmed in the device.
+set_property PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.runs/impl_1/top_module.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.runs/impl_1/top_module.ltx} [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 VIO core(s).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'vio_test' at location 'uuid_0BD50595E9785322B9D3C3AB99E7430E' from probes file, since it cannot be found on the programmed device.
+WARNING: [Labtools 27-1974] Mismatch between the design programmed into the device xc7z020_1 and the probes file(s) /home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.runs/impl_1/top_module.ltx.
+The device design has 0 ILA core(s) and 1 VIO core(s). 0 ILA core(s) and 0 VIO core(s) are matched in the probes file(s).
+Resolution: 
+1. Reprogram device with the correct programming file and associated probes file(s) OR
+2. Goto device properties and associate the correct probes file(s) with the programming file already programmed in the device.
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7z020clg400-1
+Top: top_module
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 8166.699 ; gain = 151.715 ; free physical = 3811 ; free virtual = 11518
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top_module' [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/top_module.vhd:9]
+INFO: [Synth 8-3491] module 'vio_0' declared at '/home/hamed/FPGA/Partial_reconfiguration/step_by_step/final/.Xil/Vivado-31464-hamed-PC/realtime/vio_0_stub.vhdl:5' bound to instance 'vio_test' of component 'vio_0' [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/top_module.vhd:54]
+INFO: [Synth 8-638] synthesizing module 'vio_0' [/home/hamed/FPGA/Partial_reconfiguration/step_by_step/final/.Xil/Vivado-31464-hamed-PC/realtime/vio_0_stub.vhdl:19]
+INFO: [Synth 8-3491] module 'multiplier_organised' declared at '/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/imports/Partial_reconfiguration/Module.vhd:30' bound to instance 'mult' of component 'multiplier_organised' [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/top_module.vhd:66]
+INFO: [Synth 8-638] synthesizing module 'multiplier_organised' [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/imports/Partial_reconfiguration/Module.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'multiplier_organised' (1#1) [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/imports/Partial_reconfiguration/Module.vhd:40]
+INFO: [Synth 8-3491] module 'aes_enc' declared at '/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/AES/aes_enc.vhd:20' bound to instance 'aes' of component 'aes_enc' [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/top_module.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'aes_enc' [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/AES/aes_enc.vhd:31]
+INFO: [Synth 8-638] synthesizing module '\reg ' [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/AES/reg.vhd:29]
+	Parameter size bound to: 128 - type: integer 
+INFO: [Synth 8-256] done synthesizing module '\reg ' (2#1) [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/AES/reg.vhd:29]
+INFO: [Synth 8-638] synthesizing module 'add_round_key' [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/AES/add_round_key.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'add_round_key' (3#1) [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/AES/add_round_key.vhd:29]
+INFO: [Synth 8-638] synthesizing module 'sub_byte' [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/AES/sub_byte.vhd:27]
+INFO: [Synth 8-638] synthesizing module 'sbox' [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/AES/sbox.vhd:27]
+INFO: [Synth 8-226] default block is never used [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/AES/sbox.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'sbox' (4#1) [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/AES/sbox.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'sub_byte' (5#1) [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/AES/sub_byte.vhd:27]
+INFO: [Synth 8-638] synthesizing module 'shift_rows' [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/AES/shift_rwos.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'shift_rows' (6#1) [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/AES/shift_rwos.vhd:27]
+INFO: [Synth 8-638] synthesizing module 'mix_columns' [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/AES/mix_columns.vhd:27]
+INFO: [Synth 8-638] synthesizing module 'column_calculator' [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/AES/column_calculator.vhd:27]
+INFO: [Synth 8-638] synthesizing module 'gfmult_by2' [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/AES/gfmult_by2.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'gfmult_by2' (7#1) [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/AES/gfmult_by2.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'column_calculator' (8#1) [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/AES/column_calculator.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'mix_columns' (9#1) [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/AES/mix_columns.vhd:27]
+INFO: [Synth 8-638] synthesizing module 'controller' [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/AES/controller.vhd:30]
+INFO: [Synth 8-638] synthesizing module 'reg__parameterized0' [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/AES/reg.vhd:29]
+	Parameter size bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'reg__parameterized0' (9#1) [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/AES/reg.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'controller' (10#1) [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/AES/controller.vhd:30]
+INFO: [Synth 8-638] synthesizing module 'key_schedule' [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/AES/key_schedule.vhd:30]
+INFO: [Synth 8-638] synthesizing module 'key_sch_round_function' [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/AES/key_sch_round_function.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'key_sch_round_function' (11#1) [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/AES/key_sch_round_function.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'key_schedule' (12#1) [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/AES/key_schedule.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'aes_enc' (13#1) [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/AES/aes_enc.vhd:31]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'mult'. This will prevent further optimization [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/top_module.vhd:66]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'aes'. This will prevent further optimization [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/top_module.vhd:76]
+INFO: [Synth 8-256] done synthesizing module 'top_module' (14#1) [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/new/top_module.vhd:9]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port clk
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port rst
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[127]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[126]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[125]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[124]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[123]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[122]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[121]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[120]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[119]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[118]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[117]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[116]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[115]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[114]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[113]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[112]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[111]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[110]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[109]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[108]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[107]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[106]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[105]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[104]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[103]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[102]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[101]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[100]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[99]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[98]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[97]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[96]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[95]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[94]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[93]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[92]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[91]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[90]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[89]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[88]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[87]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[86]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[85]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[84]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[83]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[82]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[81]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[80]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[79]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[78]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[77]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[76]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[75]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[74]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[73]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[72]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[71]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[70]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[69]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[68]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[67]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[66]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[65]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[64]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[63]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[62]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[61]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[60]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[59]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[58]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[57]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[56]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[55]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[54]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[53]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[52]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[51]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[50]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[49]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[48]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[47]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[46]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[45]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[44]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[43]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[42]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[41]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[40]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[39]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[38]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[37]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[36]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[35]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[34]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[33]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port x[32]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port y[127]
+WARNING: [Synth 8-3331] design multiplier_organised has unconnected port y[126]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 8279.637 ; gain = 264.652 ; free physical = 3765 ; free virtual = 11474
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 8297.449 ; gain = 282.465 ; free physical = 3782 ; free virtual = 11490
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 8297.449 ; gain = 282.465 ; free physical = 3782 ; free virtual = 11490
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint '/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/ip/vio_0/vio_0.dcp' for cell 'vio_test'
+INFO: [Netlist 29-17] Analyzing 152 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/ip/vio_0/vio_0.xdc] for cell 'vio_test'
+Finished Parsing XDC File [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/ip/vio_0/vio_0.xdc] for cell 'vio_test'
+Parsing XDC File [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/constrs_1/imports/vivado_projects/Arty-Z7-20-Master.xdc]
+Finished Parsing XDC File [/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/constrs_1/imports/vivado_projects/Arty-Z7-20-Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8535.102 ; gain = 0.000 ; free physical = 3656 ; free virtual = 11365
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:23 ; elapsed = 00:00:16 . Memory (MB): peak = 8620.977 ; gain = 605.992 ; free physical = 3585 ; free virtual = 11308
+47 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:19 . Memory (MB): peak = 8620.977 ; gain = 802.648 ; free physical = 3585 ; free virtual = 11308
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 15 18:40:32 2019...

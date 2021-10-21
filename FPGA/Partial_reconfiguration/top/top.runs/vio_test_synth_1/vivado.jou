@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Dec 15 15:19:46 2019
+# Process ID: 2214
+# Current directory: /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/top/top.runs/vio_test_synth_1
+# Command line: vivado -log vio_test.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source vio_test.tcl
+# Log file: /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/top/top.runs/vio_test_synth_1/vio_test.vds
+# Journal file: /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/top/top.runs/vio_test_synth_1/vivado.jou
+#-----------------------------------------------------------
+source vio_test.tcl -notrace

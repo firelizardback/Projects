@@ -1,0 +1,83 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Dec 15 17:16:17 2019
+# Process ID: 31464
+# Current directory: /home/hamed/FPGA/Partial_reconfiguration/step_by_step/final
+# Command line: vivado
+# Log file: /home/hamed/FPGA/Partial_reconfiguration/step_by_step/final/vivado.log
+# Journal file: /home/hamed/FPGA/Partial_reconfiguration/step_by_step/final/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_hw
+connect_hw_server
+open_hw_target
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/final/probes.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/final/probes.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/final/Config_aes.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property OUTPUT_VALUE 00000000000000000000000040200000 [get_hw_probes x -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+commit_hw_vio [get_hw_probes {x} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+set_property OUTPUT_VALUE 000000000000000000000000C11B3333 [get_hw_probes y -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+commit_hw_vio [get_hw_probes {y} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+set_property OUTPUT_VALUE 1 [get_hw_probes rst -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+commit_hw_vio [get_hw_probes {rst} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+set_property OUTPUT_VALUE 0 [get_hw_probes rst -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+commit_hw_vio [get_hw_probes {rst} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+set_property PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/final/probes.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/final/probes.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/final/Config_mult_pblock_inst_function128_partial.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/final/probes.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/final/probes.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/final/Config_aes_pblock_inst_function128_partial.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property OUTPUT_VALUE 1 [get_hw_probes rst -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+commit_hw_vio [get_hw_probes {rst} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+set_property OUTPUT_VALUE 0 [get_hw_probes rst -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+commit_hw_vio [get_hw_probes {rst} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+set_property PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/final/probes.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/final/probes.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/final/Config_mult_pblock_inst_function128_partial.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property OUTPUT_VALUE 1 [get_hw_probes rst -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+commit_hw_vio [get_hw_probes {rst} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+set_property OUTPUT_VALUE 0 [get_hw_probes rst -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+commit_hw_vio [get_hw_probes {rst} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+close_project
+open_project /home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.xpr
+update_compile_order -fileset sources_1
+set_property -dict [list CONFIG.C_NUM_PROBE_OUT {3}] [get_ips vio_0]
+generate_target all [get_files  /home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/ip/vio_0/vio_0.xci]
+catch { config_ip_cache -export [get_ips -all vio_0] }
+export_ip_user_files -of_objects [get_files /home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/ip/vio_0/vio_0.xci] -no_script -sync -force -quiet
+reset_run vio_0_synth_1
+launch_runs -jobs 4 vio_0_synth_1
+export_simulation -of_objects [get_files /home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.srcs/sources_1/ip/vio_0/vio_0.xci] -directory /home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.ip_user_files/sim_scripts -ip_user_files_dir /home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.ip_user_files -ipstatic_source_dir /home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.cache/compile_simlib/modelsim} {questa=/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.cache/compile_simlib/questa} {ies=/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.cache/compile_simlib/ies} {xcelium=/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.cache/compile_simlib/xcelium} {vcs=/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.cache/compile_simlib/vcs} {riviera=/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.runs/impl_1/top_module.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.runs/impl_1/top_module.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.runs/impl_1/top_module.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.runs/impl_1/debug_nets.ltx} [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.runs/impl_1/top_module.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/multi32_float/multi32_float.runs/impl_1/top_module.ltx} [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+synth_design -rtl -name rtl_1

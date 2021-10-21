@@ -1,0 +1,53 @@
+start_gui
+create_project -in_memory -part xc7z020clg400-1
+add_file ./top_synth.dcp
+add_files ./Sources/xdc/top_io_Arty_Z720.xdc
+set_property USED_IN {implementation} [get_files ./Sources/xdc/top_io_Arty_Z720.xdc]
+add_file ./rm1_synth.dcp
+set_property SCOPED_TO_CELLS {inst_function128} [get_files ./rm1_synth.dcp]
+link_design -mode default -reconfig_partitions {inst_function128} -part xc7z020clg400-1 -top top
+set_property HD.RECONFIGURABLE 1 [get_cells inst_function128]
+write_checkpoint -force ./top_link_aes.dcp
+startgroup
+create_pblock pblock_inst_function128
+resize_pblock pblock_inst_function128 -add {SLICE_X84Y50:SLICE_X99Y99 DSP48_X3Y20:DSP48_X3Y39 RAMB18_X4Y20:RAMB18_X4Y39 RAMB36_X4Y10:RAMB36_X4Y19}
+add_cells_to_pblock pblock_inst_function128 [get_cells [list inst_function128]] -clear_locs
+endgroup
+set_property RESET_AFTER_RECONFIG 1 [get_pblocks pblock_inst_function128]
+set_property SNAPPING_MODE ROUTING [get_pblocks pblock_inst_function128]
+create_drc_ruledeck ruledeck_1
+add_drc_checks -ruledeck ruledeck_1 [get_drc_checks {HDPRA-62 HDPRA-60 HDPRA-58 HDPRA-57 HDPRA-56 HDPRA-55 HDPRA-54 HDPRA-53 HDPRA-52 HDPRA-51 HDPRA-21 HDPR-43 HDPR-20 HDPR-88 HDPR-41 HDPR-40 HDPR-30 HDPR-96 HDPR-95 HDPR-94 HDPR-93 HDPR-92 HDPR-91 HDPR-90 HDPR-87 HDPR-86 HDPR-85 HDPR-84 HDPR-83 HDPR-74 HDPR-73 HDPR-72 HDPR-71 HDPR-70 HDPR-69 HDPR-68 HDPR-67 HDPR-66 HDPR-65 HDPR-64 HDPR-63 HDPR-62 HDPR-61 HDPR-60 HDPR-59 HDPR-58 HDPR-57 HDPR-54 HDPR-51 HDPR-50 HDPR-49 HDPR-48 HDPR-47 HDPR-46 HDPR-45 HDPR-44 HDPR-42 HDPR-38 HDPR-37 HDPR-36 HDPR-35 HDPR-34 HDPR-33 HDPR-32 HDPR-29 HDPR-28 HDPR-27 HDPR-26 HDPR-25 HDPR-23 HDPR-22 HDPR-18 HDPR-17 HDPR-16 HDPR-15 HDPR-14 HDPR-13 HDPR-12 HDPR-11 HDPR-10 HDPR-9 HDPR-8 HDPR-7 HDPR-6 HDPR-5 HDPR-4 HDPR-3 HDPR-2 HDPR-1}]
+report_drc -name drc_1 -ruledecks {ruledeck_1}
+delete_drc_ruledeck ruledeck_1
+pwd
+write_xdc ./top_all.xdc
+opt_design
+place_design
+route_design
+write_checkpoint -force ./top_route_design.dcp
+report_utilization -file ./top_utilization.rpt
+report_timing_summary -file ./top_timing_summary.rpt
+update_design -cell inst_function128 -black_box
+lock_design -level routing
+write_checkpoint -force ./static_route_design.dcp
+close_project
+create_project -in_memory -part xc7z020clg400-1
+add_files ./static_route_design.dcp
+add_files ./rm2_synth.dcp
+set_property SCOPED_TO_CELLS {inst_function128} [get_files ./rm2_synth.dcp]
+link_design -mode default -reconfig_partitions {inst_function128} -part xc7z020clg400-1 -top top
+opt_design
+place_design
+route_design
+write_checkpoint -force ./top_route_design_mult.dcp
+report_utilization -file ./top_mult_utilization.rpt
+report_timing_summary -file ./top_mult_timing_summary.rpt
+pr_verify ./top_route_design.dcp ./top_route_design_mult.dcp
+open_checkpoint ./top_route_design.dcp
+current_project Project
+write_bitstream -force -file ./Config_aes.bit
+close_project
+open_checkpoint ./top_route_design_mult.dcp
+current_project project_top_route_design
+write_bitstream -force -file ./Config_mult.bit
+close_project

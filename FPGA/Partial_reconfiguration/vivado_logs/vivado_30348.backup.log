@@ -1,0 +1,60 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Dec 15 17:03:37 2019
+# Process ID: 30348
+# Current directory: /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1
+# Command line: vivado
+# Log file: /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/vivado.log
+# Journal file: /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_hw
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:06:40
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/003017A7024AA
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+set_property PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/probes.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/probes.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Config_aes.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 VIO core(s).
+INFO: [Labtools 27-1889] Uploading output probe values for VIO core [hw_vio_1]
+set_property OUTPUT_VALUE 00000000000000000000000040200000 [get_hw_probes x -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+commit_hw_vio [get_hw_probes {x} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+set_property OUTPUT_VALUE 000000000000000000000000C11B3333 [get_hw_probes y -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+commit_hw_vio [get_hw_probes {y} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+set_property OUTPUT_VALUE 1 [get_hw_probes rst -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+commit_hw_vio [get_hw_probes {rst} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+set_property OUTPUT_VALUE 0 [get_hw_probes rst -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+commit_hw_vio [get_hw_probes {rst} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+set_property PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/probes.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/probes.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Config_mult_pblock_inst_function128_partial.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 VIO core(s).
+set_property OUTPUT_VALUE 1 [get_hw_probes rst -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+commit_hw_vio [get_hw_probes {rst} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+set_property OUTPUT_VALUE 0 [get_hw_probes rst -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+commit_hw_vio [get_hw_probes {rst} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 15 17:13:10 2019...

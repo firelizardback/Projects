@@ -1,0 +1,39 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Dec 15 17:03:37 2019
+# Process ID: 30348
+# Current directory: /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1
+# Command line: vivado
+# Log file: /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/vivado.log
+# Journal file: /home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_hw
+connect_hw_server
+open_hw_target
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/probes.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/probes.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Config_aes.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property OUTPUT_VALUE 00000000000000000000000040200000 [get_hw_probes x -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+commit_hw_vio [get_hw_probes {x} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+set_property OUTPUT_VALUE 000000000000000000000000C11B3333 [get_hw_probes y -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+commit_hw_vio [get_hw_probes {y} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+set_property OUTPUT_VALUE 1 [get_hw_probes rst -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+commit_hw_vio [get_hw_probes {rst} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+set_property OUTPUT_VALUE 0 [get_hw_probes rst -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+commit_hw_vio [get_hw_probes {rst} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+set_property PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/probes.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/probes.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/hamed/FPGA/Partial_reconfiguration/step_by_step/step1/Config_mult_pblock_inst_function128_partial.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property OUTPUT_VALUE 1 [get_hw_probes rst -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+commit_hw_vio [get_hw_probes {rst} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+set_property OUTPUT_VALUE 0 [get_hw_probes rst -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
+commit_hw_vio [get_hw_probes {rst} -of_objects [get_hw_vios -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"inst_vio_test"}]]
