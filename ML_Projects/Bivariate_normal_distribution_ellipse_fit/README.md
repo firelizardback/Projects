@@ -99,9 +99,9 @@ The ‘normal\_distribution\_test\_generation\_fit.m’ script file just an exam
 
 The ‘imageloader\_MK\_BVN.m’ script is another example. I used the script written by Mikhail which loads an image and reduces the background. I just add the bivariate normal distribution fit at the end.  Here you can see some outputs from the script:
 
-![](Aspose.Words.60a37bc1-2b58-4cc9-9bf1-3d6a82148945.001.png)
 
-![](Aspose.Words.60a37bc1-2b58-4cc9-9bf1-3d6a82148945.002.png)
+
+
 
 Here, In the left I sliced the data to [0.8,1], [0.6,0.8], [0.4,06], [0.2,0.4] of the maximum value and fit the ellipse for each of them. In the right I sliced the data to [1,0], [0.8,0], [0.6,0], [0.4,0], [0.2,0] of the maximum value. Just to be mention that the contour line is somewhere in this range and then it is not really shows the border. In the below image, you can see how the orientation and asymmetry can change from the center to the border then you should think which slice is more suitable for this kind of study. In the above image, more symmetric case, the elliptical parameters seems more or less identical. 
 
