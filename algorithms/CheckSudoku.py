@@ -1,4 +1,4 @@
-from typing import List
+from typing import Listmnjhb
 
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
