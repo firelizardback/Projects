@@ -1,5 +1,7 @@
+from typing import List
+
 class Solution:
-    def isValidSudoku(self, board):
+    def isValidSudoku(self, board: List[List[str]]) -> bool:
         #print(board[0])
         for i in board:
             int1 = [int(item.replace('.','0')) for item in i]
